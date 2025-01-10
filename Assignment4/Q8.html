@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz Submission</title>
+</head>
+<body>
+    <h1>Online Quiz</h1>
+    <form action="/submit-quiz" method="post">
+        <!-- Name -->
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Question 1: Multiple Choice (Radio Buttons) -->
+        <label for="question-1">Question 1: What is the capital of France?</label><br>
+        <input type="radio" id="paris" name="question-1" value="paris" required>
+        <label for="paris">Paris</label><br>
+        <input type="radio" id="london" name="question-1" value="london">
+        <label for="london">London</label><br>
+        <input type="radio" id="rome" name="question-1" value="rome">
+        <label for="rome">Rome</label><br><br>
+
+        <!-- Question 2: Multiple Choice (Checkboxes) -->
+        <label for="question-2">Question 2: Select the programming languages you know (choose multiple):</label><br>
+        <input type="checkbox" id="html" name="question-2" value="html">
+        <label for="html">HTML</label><br>
+        <input type="checkbox" id="css" name="question-2" value="css">
+        <label for="css">CSS</label><br>
+        <input type="checkbox" id="js" name="question-2" value="js">
+        <label for="js">JavaScript</label><br>
+        <input type="checkbox" id="python" name="question-2" value="python">
+        <label for="python">Python</label><br><br>
+
+        <!-- Question 3: Multiple Choice (Radio Buttons) -->
+        <label for="question-3">Question 3: What is 2 + 2?</label><br>
+        <input type="radio" id="three" name="question-3" value="three" required>
+        <label for="three">3</label><br>
+        <input type="radio" id="four" name="question-3" value="four">
+        <label for="four">4</label><br>
+        <input type="radio" id="five" name="question-3" value="five">
+        <label for="five">5</label><br><br>
+
+        <!-- Timer Placeholder -->
+        <label for="timer">Time Remaining:</label><br>
+        <input type="text" id="timer" name="timer" value="Time remaining: 10:00" disabled style="font-weight: bold; color: red;"><br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit Quiz</button>
+    </form>
+</body>
+</html>
