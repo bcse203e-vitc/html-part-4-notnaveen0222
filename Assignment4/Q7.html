@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking Form</title>
+</head>
+<body>
+    <h1>Travel Booking</h1>
+    <form action="/submit-booking" method="post">
+        <!-- Full Name -->
+        <label for="full-name">Full Name:</label><br>
+        <input type="text" id="full-name" name="full-name" required><br><br>
+
+        <!-- Contact Information -->
+        <label for="contact-info">Contact Information:</label><br>
+        <input type="text" id="contact-info" name="contact-info" required><br><br>
+
+        <!-- Destination (Dropdown) -->
+        <label for="destination">Destination:</label><br>
+        <select id="destination" name="destination" required>
+            <option value="paris">Paris</option>
+            <option value="london">London</option>
+            <option value="new-york">New York</option>
+            <option value="tokyo">Tokyo</option>
+        </select><br><br>
+
+        <!-- Travel Dates -->
+        <label for="travel-dates">Travel Dates:</label><br>
+        <input type="date" id="travel-dates" name="travel-dates" required><br><br>
+
+        <!-- Number of Travelers -->
+        <label for="num-travelers">Number of Travelers:</label><br>
+        <input type="number" id="num-travelers" name="num-travelers" min="1" required><br><br>
+
+        <!-- Travel Class (Radio Buttons) -->
+        <label>Travel Class:</label><br>
+        <input type="radio" id="economy" name="travel-class" value="economy" required>
+        <label for="economy">Economy</label><br>
+        <input type="radio" id="business" name="travel-class" value="business">
+        <label for="business">Business</label><br>
+        <input type="radio" id="first-class" name="travel-class" value="first-class">
+        <label for="first-class">First Class</label><br><br>
+
+        <!-- Travel Insurance (Checkbox) -->
+        <label for="insurance">
+            <input type="checkbox" id="insurance" name="insurance"> Opt for travel insurance
+        </label><br><br>
+
+        <!-- Total Cost Calculation (Field only, no JS calculation) -->
+        <label for="total-cost">Total Cost (Estimate):</label><br>
+        <input type="text" id="total-cost" name="total-cost" placeholder="Estimated cost" readonly><br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Book Travel</button>
+    </form>
+</body>
+</html>
